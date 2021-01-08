@@ -8,7 +8,8 @@ public class balle : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        gameObject.transform.parent = null;
         rb = GetComponent<Rigidbody2D>();
-        rb.velocity = new Vector2(1.0f, -2.0f);
+        rb.velocity = new Vector2(Random.Range(-5.0f, 5.0f), 5.0f);
     }
 }
