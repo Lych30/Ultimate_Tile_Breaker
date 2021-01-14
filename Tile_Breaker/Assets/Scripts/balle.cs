@@ -13,6 +13,7 @@ public class balle : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        gameObject.transform.parent = null;
         rb = GetComponent<Rigidbody2D>();
         rb.velocity = _initialVelocity.normalized * _ballSpeed;
     }
