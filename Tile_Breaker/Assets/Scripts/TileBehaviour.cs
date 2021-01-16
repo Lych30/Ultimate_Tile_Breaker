@@ -21,6 +21,7 @@ public class TileBehaviour : MonoBehaviour
 
     public void Break()
     {
+        ScoreSysteme.GetInstance().AddScore(10);
         GameObject instancePart = Instantiate(_breakParticles, transform.position, Quaternion.identity);
         instancePart.GetComponent<ParticleSystem>().startColor = GetComponentInChildren<SpriteRenderer>().color;
 

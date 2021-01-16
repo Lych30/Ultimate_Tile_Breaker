@@ -6,12 +6,14 @@ using UnityEngine.UI;
 public class ScoreSysteme : MonoBehaviour
 {
     [SerializeField] private Text scoreText;
-    
+
+    private static ScoreSysteme instance;
     private int score = 0;
 
     // Start is called before the first frame update
     void Start()
     {
+        instance = this;
         RefreshScore();
     }
 
@@ -22,6 +24,11 @@ public class ScoreSysteme : MonoBehaviour
         {
             AddScore(100);
         }
+    }
+
+    public static ScoreSysteme GetInstance()
+    {
+        return instance;
     }
 
     private void RefreshScore()
@@ -35,5 +42,4 @@ public class ScoreSysteme : MonoBehaviour
         score += scoreToAdd;
         RefreshScore();
     }
-
 }
