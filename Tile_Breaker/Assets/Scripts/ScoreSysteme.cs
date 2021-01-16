@@ -42,4 +42,10 @@ public class ScoreSysteme : MonoBehaviour
         score += scoreToAdd;
         RefreshScore();
     }
+
+    /*
+    public void AddScore(int scoreToAdd, int player)
+    {
+
+    }*/
 }
