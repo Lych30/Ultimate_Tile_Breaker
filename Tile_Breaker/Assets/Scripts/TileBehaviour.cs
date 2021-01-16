@@ -5,6 +5,7 @@ using UnityEngine;
 public class TileBehaviour : MonoBehaviour
 {
     public GameObject _breakParticles;
+    public bool _unbreakable;
 
     // Start is called before the first frame update
     void Start()
