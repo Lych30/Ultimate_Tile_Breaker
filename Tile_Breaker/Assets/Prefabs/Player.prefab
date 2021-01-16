@@ -46,9 +46,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 051de1abbc02fba44b007a7abd60a453, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerNumber: 1
   speed: 5
-  horizontal: 0
+  horizontalGauche1: 0
+  horizontalDroite1: 0
+  horizontalGauche2: 0
+  horizontalDroite2: 0
+  Jump1: 0
+  Jump2: 0
   rb: {fileID: 0}
+  JumpForce: 10
+  isJumping: 0
 --- !u!50 &8294033561724570890
 Rigidbody2D:
   serializedVersion: 4
@@ -57,7 +65,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8294033561724570887}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
