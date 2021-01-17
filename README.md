@@ -1,7 +1,6 @@
 Ultimate_Tile_Breaker
 
-Trello : https://trello.com/invite/b/6fWpjqyp/fec9c028406b96986cc897c63e7161b8/ultimatetilebreaker
-==> https://trello.com/b/6fWpjqyp/ultimatetilebreaker
+Trello : https://trello.com/b/6fWpjqyp/ultimatetilebreaker
 
 utilisation de Trello pour definir et assigner les tache du project.
 
