@@ -493,7 +493,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &183703837
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2642,8 +2642,10 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "But du jeu:\n\n - Casser toutes les briques di niveau a l'aide de la balle
-    pour passer au niveau suivant !\n\n - Vous controlez la barre en bas de l'ecran.\n\nControles:\n\n-
-    Q pour aller vers la gauche\n - D pour aller vers la droite"
+    pour passer au niveau suivant !\n\n - Vous controlez la barre en bas de l'ecran.\n\nControles:\n\nJoueur
+    1:\n\n- Q pour aller vers la gauche\n- D pour aller vers la droite\n- Z pour
+    sauter\n\nJoueur 2:\n\n- < pour aller vers la gauche\n- > pour aller vers la
+    droite\n-  Up_Arrow pour sauter"
 --- !u!222 &1796071622
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3006,7 +3008,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1904022496
 RectTransform:
   m_ObjectHideFlags: 0
