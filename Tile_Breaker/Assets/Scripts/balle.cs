@@ -36,6 +36,19 @@ public class balle : MonoBehaviour
         if (_debugVelocity)
             DebugVelocity();
 
+        if (!IsOnScreen())
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    private bool IsOnScreen()
+    {
+        if (transform.position.y <= -5.5)
+        {
+            return false;
+        }
+        else return true;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -77,5 +90,12 @@ public class balle : MonoBehaviour
     {
         Gizmos.color = Color.red;
         Gizmos.DrawLine(transform.position, (Vector2)transform.position + (rb.velocity.normalized * _ballSpeed * 0.15f));
+    }
+
+    private void OnDestroy()
+    {
+        LifesSystem.GetInstance().LoseLife();
+        GameManager.GetInsatnce().RespawnLaBabale();
+        Debug.Log("LaBabal Destoy");
     }
 }
