@@ -10,8 +10,8 @@ public class balle : MonoBehaviour
     public bool _laser;
 
     [Space(10)]
-    public bool _forceNewVelocity;
-    public bool _debugVelocity;
+    [HideInInspector] public bool _forceNewVelocity;
+    [HideInInspector] public bool _debugVelocity;
 
 
     // Start is called before the first frame update
@@ -30,11 +30,11 @@ public class balle : MonoBehaviour
         if (CheckForZeroInVelocity())
             rb.velocity = new Vector2(rb.velocity.normalized.x + 0.025f, rb.velocity.normalized.x + 0.025f) * _ballSpeed;
 
-        if (_forceNewVelocity)
+        /*if (_forceNewVelocity)
             ForceNewVelocity();
 
         if (_debugVelocity)
-            DebugVelocity();
+            DebugVelocity();*/
 
         if (!IsOnScreen())
         {
@@ -72,6 +72,13 @@ public class balle : MonoBehaviour
         else return false;
     }
 
+    private void OnDestroy()
+    {
+        LifesSystem.GetInstance().LoseLife();
+        GameManager.GetInsatnce().RespawnLaBabale();
+        //Debug.Log("LaBabal Destoy");
+    }
+
 
     /// Debug ///
     void ForceNewVelocity()
@@ -88,14 +95,10 @@ public class balle : MonoBehaviour
 
     private void OnDrawGizmosSelected()
     {
-        Gizmos.color = Color.red;
-        Gizmos.DrawLine(transform.position, (Vector2)transform.position + (rb.velocity.normalized * _ballSpeed * 0.15f));
-    }
-
-    private void OnDestroy()
-    {
-        LifesSystem.GetInstance().LoseLife();
-        GameManager.GetInsatnce().RespawnLaBabale();
-        Debug.Log("LaBabal Destoy");
+        if (Application.isPlaying)
+        {
+            Gizmos.color = Color.red;
+            Gizmos.DrawLine(transform.position, (Vector2)transform.position + (rb.velocity.normalized * _ballSpeed * 0.15f));
+        }
     }
 }

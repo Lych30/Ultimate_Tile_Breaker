@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -32,6 +33,15 @@ public class GameManager : MonoBehaviour
         {
             Instantiate(LaBabale, new Vector3(0, -3, 0), Quaternion.identity);
         }
+        else
+        {
+            Invoke("BackToMenu", 1.5f);
+        }
+    }
+
+    void BackToMenu()
+    {
+        SceneManager.LoadScene("Menu", LoadSceneMode.Single);
     }
 
 }
